@@ -1,9 +1,25 @@
-<div class="center jumbotron">
-  <div class="text-center">
-    <h1>Silly Me</h1>
-     <h2>今、この面白い"一瞬"を"ストーリー"を全ての人に届けよう</h2>
-    <%= link_to 'アカウント作成', signup_path, class: 'btn btn-lg btn-primary' %>
-    
-    <%= link_to 'ログイン', signup_path, class: 'btn btn-lg btn-white:focus btn-white' %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-sm-4">
+      <%= form_with(model: @post, local: true) do |f| %>
+        <div class="form-group">
+          <%= f.text_area :content, class: 'form-control', rows: 5 %>
+        </div>
+        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+      <% end %>
+    </aside>
+    <div class="col-sm-8">
+      <%= render 'posts/posts', posts: @posts %>
+    </div>
   </div>
-</div>
+<% else %>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <h1>Silly Me</h1>
+       <h2>今、この面白い"一瞬"を"ストーリー"を全ての人に届けよう</h2>
+      <%= link_to 'アカウント作成', signup_path, class: 'btn btn-lg btn-primary' %>
+    
+      <%= link_to 'ログイン', signup_path, class: 'btn btn-lg btn-white:focus btn-white' %>
+    </div>
+  </div>
+<% end %>
