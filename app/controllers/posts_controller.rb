@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
   before_action :require_user_logged_in
+  
+  def index
+    @posts = Post.all.page(params[:page]).per(10)
+  end
 
   def create
     @post = current_user.posts.build(post_params)
