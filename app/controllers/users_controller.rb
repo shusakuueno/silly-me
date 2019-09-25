@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:index, :show, :edit, :update, :destroy,:followings, :followers]
+  before_action :require_user_logged_in, only: [:index, :show, :edit, :update,:followings, :followers]
+  before_action :admin_user, only: :destroy
+ 
   
   def index
     @users = User.order(id: :desc).page(params[:page]).per(3)
@@ -41,6 +43,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_path
   end
   
   def followings
@@ -64,6 +69,10 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :photo, :introduction)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduction, :avatar)
+  end
+  
+  def admin_user
+      redirect_to(root_url) unless current_user.admin?
   end
 end

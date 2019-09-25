@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :require_user_logged_in
-  
+  before_action :require_user_logged_in 
+  before_action :correct_user, only: [:destroy]  
   def index
     @posts = Post.all.page(params[:page]).per(10)
   end
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.destroy
+    @post.destroy 
     flash[:success] = 'メッセージを削除しました。'
     redirect_back(fallback_location: root_path)
   end

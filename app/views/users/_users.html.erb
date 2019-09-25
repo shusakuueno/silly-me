@@ -5,7 +5,12 @@
         <img class="mr-2 rounded" src="<%= gravatar_url(user, { size: 50 }) %>" alt="">
         <div class="media-body">
           <div>
-            <%= user.name %>
+            <li>
+              <%= link_to user.name, user %>
+              <% if current_user.admin? && !current_user?(user) %>
+            | <%= link_to "delete", user, method: :delete,data: { confirm: "You sure?" } %>
+              <% end %>
+            </li>
           </div>
           <div>
             <p><%= link_to 'プロフィール', user_path(user) %></p>

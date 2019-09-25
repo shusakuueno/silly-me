@@ -14,6 +14,7 @@ class User < ApplicationRecord
   
   has_many :favorites
   has_many :favposts, through: :favorites, source: :post
+  has_one_attached :avatar
   
   def follow(other_user)
     unless self == other_user
