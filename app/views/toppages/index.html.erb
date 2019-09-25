@@ -4,11 +4,21 @@
       <%= form_with(model: @post, local: true) do |f| %>
         <div class="form-group">
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
-
         </div>
+        <div>
+          <%= f.label "画像をアップロード" %><br><%= f.file_field :image,accept: 'image/jpeg,image/gif,image/png'%>
+        </div>
+
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
-      
+      <script type="text/javascript">
+        $('#post_image').bind('change', function() {
+          var size_in_megabytes = this.files[0].size/1024/1024;
+          if (size_in_megabytes > 5) {
+            alert('Maximum file size is 5MB. Please choose a smaller file.');
+          }
+        });
+      </script>
     </aside>
     <div class="col-sm-8">
       <%= render 'posts/posts', posts: @posts %>

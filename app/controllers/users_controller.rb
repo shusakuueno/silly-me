@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @users = User.order(id: :desc).page(params[:page])
     @posts = @user.posts.order(id: :desc).page(params[:page])
     counts(@user)
   end
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.create!(user_params)
     if @user.save
       flash[:success] = 'ユーザを登録しました。'
       redirect_to @user
@@ -69,7 +70,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduction, :avatar)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduction, :image)
   end
   
   def admin_user

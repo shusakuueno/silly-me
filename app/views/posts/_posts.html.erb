@@ -6,7 +6,9 @@
         <div>
           <%= link_to post.user.name, user_path(post.user) %> <span class="text-muted">posted at <%= post.created_at %></span>
         </div>
-        
+        <div>
+          <%= image_tag post.image.url if post.image? %>
+        </div>
         <div>
           <p class="mb-0"><%= post.content %></p>
         </div>
