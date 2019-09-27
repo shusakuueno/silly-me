@@ -57,3 +57,6 @@ gem 'kaminari'
 gem 'counter_culture', '~> 1.8'
 gem 'carrierwave'
 #gem 'rmagick'
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
