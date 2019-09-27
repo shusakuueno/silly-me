@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'kaminari'
 gem 'counter_culture', '~> 1.8'
 gem 'carrierwave'
+#gem 'rmagick'

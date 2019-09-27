@@ -1,18 +1,19 @@
 class User < ApplicationRecord
   before_save { self.email.downcase! }
+
   validates :name, presence: true, length: { maximum: 25 }
   validates :email, presence: true, length: { maximum: 50 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false }
   has_secure_password
   
-  has_many :posts
-  has_many :follows
-  has_many :followings, through: :follows, source: :follow
+  has_many :posts, dependent: :destroy
+  has_many :follows, dependent: :destroy
+  has_many :followings, through: :follows, source: :follow, dependent: :destroy
   has_many :reverses_of_follow, class_name: 'Follow', foreign_key: 'follow_id'
-  has_many :followers, through: :reverses_of_follow, source: :user
+  has_many :followers, through: :reverses_of_follow, source: :user, dependent: :destroy
   
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :favposts, through: :favorites, source: :post
   
   def follow(other_user)

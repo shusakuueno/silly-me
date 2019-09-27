@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:index, :show, :edit, :update,:followings, :followers]
+  before_action :require_user_logged_in, only: [:index, :show, :edit, :update, :destroy, :followings, :followers]
   before_action :admin_user, only: :destroy
  
   
@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @users = User.order(id: :desc).page(params[:page])
     @posts = @user.posts.order(id: :desc).page(params[:page])
     counts(@user)
   end
@@ -35,17 +34,21 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
-      flash[:success] = "プロフィール更新完了"
-      redirect_to @user
+    if current_user == @user
+      if @user.update_attributes(user_params)
+        flash[:success] = "プロフィール更新完了"
+        redirect_to @user
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+        redirect_to root_url
     end
   end
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
+    flash[:success] = "ユーザー削除完了"
     redirect_to users_path
   end
   

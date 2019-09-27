@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :require_user_logged_in 
   before_action :correct_user, only: [:destroy]  
   def index
-    @posts = Post.all.page(params[:page]).per(10)
+    @posts = Post.order(id: :desc).page(params[:page])
   end
 
   def create
