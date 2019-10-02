@@ -8,7 +8,6 @@
         <div>
           <%= f.label "画像をアップロード" %><br><%= f.file_field :image,accept: 'image/jpeg,image/gif,image/png'%>
         </div>
-
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
       <script type="text/javascript">
@@ -29,7 +28,6 @@
     <div class="text-center">
       <h1>Silly Me</h1>
        <h2>今、この面白い"一瞬"を"ストーリー"を全ての人に届けよう</h2>
-       
        <h2>クッソ楽しい人生を始める</h2>
       <%= link_to '会員登録', signup_path, class: 'btn btn-lg btn-primary' %>
       <%= link_to 'ログイン', login_path, class: 'btn btn-lg btn-light' %>
