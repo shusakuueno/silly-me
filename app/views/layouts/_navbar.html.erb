@@ -13,9 +13,10 @@
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><%= current_user.name %></a>
             <ul class="dropdown-menu dropdown-menu-right">
               <li class="dropdown-item"><%= link_to 'ユーザー詳細', user_path(current_user) %></li>
-              <li class="dropdown-item"><%= link_to "プロフィール編集", edit_user_path(current_user) %></li>
+              <li class="dropdown-item"><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
               <li class="dropdown-item"><%= link_to 'お気に入り', favorites_user_path(current_user) %></li>
               <li class="dropdown-item"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+              <li class="dropdown-item"><%= link_to '退会', user_path(current_user), method: :delete,data: { confirm: "You sure?" } %></li>
             </ul>
           </li>
         <% else %>
