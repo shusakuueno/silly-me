@@ -1,24 +1,27 @@
-# README
+【名前】
+Silly-Me
+【概要】
+日常の面白い写真、話を共有するシンプルなWebサービスです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+【アプリケーション機能一覧】
+・記事一覧表示機能
+・記事詳細表示機能
+・記事投稿機能
+・管理者権限機能
+・ユーザ登録機能
+・ログイン認証機能
+・画像ファイルアップロード機能
+・DBテーブルのリレーション管理
+・ページネーション機能
+・タイムライン表示機能
 
-Things you may want to cover:
+【使用している技術一覧】
+言語：Ruby(2.5.3)、HTML5、CSS3
+開発環境：Cloud9（AWS）、Linux、Heroku、git/GitHub
+DB：MySQL
+フレームワーク：Rails(5.2.2)、Bootstrap
 
-* Ruby version
+【ライブラリ】
+・gem 'kaminari'(ページネーション)
+・gem 'carrierwave'(画像アップロード)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
