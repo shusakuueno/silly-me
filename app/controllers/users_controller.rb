@@ -4,7 +4,8 @@ class UsersController < ApplicationController
  
   
   def index
-    @users = User.order(id: :desc).page(params[:page]).per(3)
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true).order(name: :asc).page(params[:page])
   end
 
   def show
