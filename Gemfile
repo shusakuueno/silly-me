@@ -56,7 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'kaminari'
 gem 'counter_culture', '~> 1.8'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
-gem 'cloudinary'
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
