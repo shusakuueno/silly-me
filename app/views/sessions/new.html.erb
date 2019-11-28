@@ -9,17 +9,25 @@
 
       <div class="form-group">
         <%= f.label :email, 'メールアドレス' %>
-        <%= f.email_field 'shiba@gmail.com',:email, class: 'form-control' %>
+        <%= f.email_field :email, class: 'form-control', placeholder: 'shiba@gmail.com' %>
       </div>
 
       <div class="form-group">
         <%= f.label :password, 'パスワード' %>
-        <%= f.password_field 'shiba',:password, class: 'form-control' %>
+        <%= f.password_field :password, class: 'form-control', value: 'shiba' %>
       </div>
-
       <%= f.submit 'ログイン', class: 'btn btn-primary btn-block' %>
     <% end %>
 
     <p>新しいユーザーは<%= link_to 'こちら', signup_path %></p>
+    <br>
+    <h3>管理者情報</h3>
+    <p>管理者ID: shiba@gmail.com</p>
+    <p>PW: shiba</p>
+    <h3>ログインユーザ情報</h3>
+    <p>ユーザID: ueno@gmail.com</p>
+    <p>PW: ueno</p>
+    
   </div>
+  
 </div>
