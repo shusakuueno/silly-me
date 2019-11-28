@@ -6,6 +6,7 @@ Silly-Me
 https://docs.google.com/document/d/1_q8ede7261FFY0YyBNw_PFiTKeUWyR5cBIg6QP9jmV8/edit?usp=sharing
 
 ## 【要件定義書】
+https://docs.google.com/spreadsheets/d/1Lg23s-wls7vHPgXXiEONb6vmcIkx1LW_MTkYfdy08HQ/edit?usp=sharing
 
 ## 【ER図】
 https://cacoo.com/diagrams/he8Z2yMqJubzdcEO/D5071
