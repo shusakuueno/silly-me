@@ -5,17 +5,17 @@
 ## 【アプリ名】
 Silly-Me
 ## 【企画書】
-[https://docs.google.com/document/d/1_q8ede7261FFY0YyBNw_PFiTKeUWyR5cBIg6QP9jmV8/edit?usp=sharing]
-(https://docs.google.com/document/d/1_q8ede7261FFY0YyBNw_PFiTKeUWyR5cBIg6QP9jmV8/edit?usp=sharing)
+https://docs.google.com/document/d/1_q8ede7261FFY0YyBNw_PFiTKeUWyR5cBIg6QP9jmV8/edit?usp=sharing
 
 ## 【要件定義書】
 
 ## 【ER図】
-[https://cacoo.com/diagrams/he8Z2yMqJubzdcEO/D5071]
-(https://cacoo.com/diagrams/he8Z2yMqJubzdcEO/D5071)
+https://cacoo.com/diagrams/he8Z2yMqJubzdcEO/D5071
 
 ## 【概要】
 日常の面白い写真、話を共有するシンプルなWebサービスです。
+くだらない面白い写真、話をテーマにしたアプリがあれば盛り上がると思い開発しました。
+お笑い好きなユーザ同士が交流できればより一層楽しめるSNSアプリです。
 
 ## 【アプリケーション機能一覧】
 ・記事一覧表示機能
