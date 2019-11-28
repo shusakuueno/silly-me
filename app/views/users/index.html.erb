@@ -1,7 +1,7 @@
-<% provide(:title, '最高に面白い人たち一覧') %>
-<h1>最高に面白い人たち一覧</h1>
+<% provide(:title, 'ユーザ一覧') %>
+<h1>ユーザ一覧</h1>
 <%= search_form_for @q do |f| %>
-  <%= f.label :ユーザーを検索 %>
+  <%= f.label :ユーザを検索 %>
   <%= f.search_field :name_cont %>
   <%= f.submit %>
 <% end %>
