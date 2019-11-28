@@ -47,4 +47,8 @@ class User < ApplicationRecord
   def favpost?(post)
     self.favposts.include?(post)
   end
+  
+  def feed_posts
+    Post.where(user_id: self.following_ids + [self.id])
+  end
 end
