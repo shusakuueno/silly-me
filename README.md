@@ -11,6 +11,9 @@ https://docs.google.com/spreadsheets/d/1Lg23s-wls7vHPgXXiEONb6vmcIkx1LW_MTkYfdy0
 ## 【ER図】
 https://cacoo.com/diagrams/he8Z2yMqJubzdcEO/D5071
 
+## 【フローチャート図】
+https://cacoo.com/diagrams/he8Z2yMqJubzdcEO/14860
+
 ## 【概要】
 日常の面白い写真、話を共有するシンプルなWebサービスです。
 くだらない面白い写真、話をテーマにしたアプリがあれば盛り上がると思い開発しました。
