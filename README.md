@@ -53,7 +53,7 @@ https://cacoo.com/diagrams/he8Z2yMqJubzdcEO/14860
 
 開発環境：Cloud9（AWS）、Linux、Heroku、git/GitHub
 
-DB：MySQL 14.14
+DB：MySQL 5.5.62
 
 フレームワーク：Rails(5.2.2)、Bootstrap
 
