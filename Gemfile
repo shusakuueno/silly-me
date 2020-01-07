@@ -61,9 +61,6 @@ group :production do
 end
 gem 'ransack'
 gem 'nokogiri', '~> 1.7'
-group :production, :staging do
-  gem 'unicorn', '5.4.1'
-end
 
 group :development, :test do
   gem 'capistrano'
@@ -72,3 +69,6 @@ group :development, :test do
   gem 'capistrano-rbenv'
 end
 
+group :production, :staging do
+  gem 'unicorn'
+end
