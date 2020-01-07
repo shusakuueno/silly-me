@@ -6,3 +6,6 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 
 Dir.glob('lib/capistrano/tasks/*.rb').each { |r| import r }
+
+require "capistrano/scm/git"
+install_plugin Capistrano::SCM::Git

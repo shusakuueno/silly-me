@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock '3.4.0'
+lock '3.11.2'
 
 set :application, "SillyMe"
 set :repo_url, "https://github.com/shusakuueno/silly-me.git"
