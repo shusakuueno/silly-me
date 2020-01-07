@@ -42,7 +42,7 @@
 # Global options
 # --------------
 #  set :ssh_options, {
-#    keys: %w(AAAAB3NzaC1yc2EAAAADAQABAAACAQDn3Nfws/214ds7zn4VO5Av0II0p/7q1k1y9sZWBBW+BhTt5+FeicaAXA6DNzUwQwwSnK4TasZVtIz0jbG8PllKT7oUQI3hJDgUCYclUmnmQxHlMi3OzkuLibgwVv7dS0bJumL8DD5MC3m9zR1itQ1ZYBNv8U9Vb42fzRnczUXLCUnCCwDRp8Ty9t7y08dQ8jWYDEzf/T6qzEuOBZ23EMHJO7dNa1qZJk9ZHyM6XID6UbEl2SeZ0/Mb6RFNLi076M9bl9nLNQ9oJz/ZLRiDN0olpcyLO4cc5dIVuZPcQPzY1W6sPLjBs4y/GOey9jp/zhbNci9DSko8YN5fnuGXKHxJc6lh2C0dzWEb1oxZBmXsELw65xlkm7fBUWcr0jMf+XSTAOKwYxOmbaNvfMC28Qqop2Jx5xdgIVgrJGYN+bO8IFWD+PljxwIi0df22MP/ydLSHtBtsMrYGi2HQV0v9T5w0qihZEzihfj1fqYMS9l/srrvnHPyg8Woh/GMTCWjOSNviH5plTIhnybTvx4qzc7tRNwU/v9evakv7yuGjwvuJjIqIqmRHLugTm1P0ofXMmov5T01Ewa2/GWotibRpfq0SY5cpD/ww7OySNfxl1NOxmETtMOFVq1rrPwouO+kfitsChk3askoskK84yFXrm14Gp2wVtlfD4tbZfTRMuPY4w== 82ecd828b223404f95d2cbfd9099e04d@cloud9.amazon.com),
+#    keys: %w(~/.ssh/first_aws_rsa),
 #    forward_agent: false,
 #    auth_methods: %w(password)
 #  }
@@ -54,8 +54,34 @@
 #   roles: %w{web db app},
 #   ssh_options: {
 #     user: "user_name", # overrides user setting above
-#     keys: %w(AAAAB3NzaC1yc2EAAAADAQABAAACAQDn3Nfws/214ds7zn4VO5Av0II0p/7q1k1y9sZWBBW+BhTt5+FeicaAXA6DNzUwQwwSnK4TasZVtIz0jbG8PllKT7oUQI3hJDgUCYclUmnmQxHlMi3OzkuLibgwVv7dS0bJumL8DD5MC3m9zR1itQ1ZYBNv8U9Vb42fzRnczUXLCUnCCwDRp8Ty9t7y08dQ8jWYDEzf/T6qzEuOBZ23EMHJO7dNa1qZJk9ZHyM6XID6UbEl2SeZ0/Mb6RFNLi076M9bl9nLNQ9oJz/ZLRiDN0olpcyLO4cc5dIVuZPcQPzY1W6sPLjBs4y/GOey9jp/zhbNci9DSko8YN5fnuGXKHxJc6lh2C0dzWEb1oxZBmXsELw65xlkm7fBUWcr0jMf+XSTAOKwYxOmbaNvfMC28Qqop2Jx5xdgIVgrJGYN+bO8IFWD+PljxwIi0df22MP/ydLSHtBtsMrYGi2HQV0v9T5w0qihZEzihfj1fqYMS9l/srrvnHPyg8Woh/GMTCWjOSNviH5plTIhnybTvx4qzc7tRNwU/v9evakv7yuGjwvuJjIqIqmRHLugTm1P0ofXMmov5T01Ewa2/GWotibRpfq0SY5cpD/ww7OySNfxl1NOxmETtMOFVq1rrPwouO+kfitsChk3askoskK84yFXrm14Gp2wVtlfD4tbZfTRMuPY4w== 82ecd828b223404f95d2cbfd9099e04d@cloud9.amazon.com),
+#     keys: %w(),
 #     forward_agent: false,
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+server '3.113.216.214', user: 'shusaku', roles: %w{app db web}
+set :ssh_options, keys: 'WIuJO+0qOHUqu8UZeqFpl5CHXVVpxaORHKVwqwHDsJoSrmo95rkWjgPWQrnOI3wV
+RMrV3Y4vn/Cr+RCuVKYg7aKb+8Z2sYiXQpRaddhR2vCUch4YydE4gExJ/dxb1Z36
+CjM0IDrn0bQoCxdk8du2oOh+PGirwcYQYTOnqkDkLZEUaK+0ZtIh2aSk2oVVqLZ0
+3xN1n1GtG56Qxmy4Kbz72XDMBDrzdID3BP/xOmv6WAXFfM1ozeYY9yFfbSUa87Lk
+sjGwL9cwVcaRPCuuA2d+cFDgtVPugsOWmE+CcIw1Epz1g60E3m133T4y9h4HUkNz
+CygMIrsqzTNGQGbQLVejr4BxmXCICTqOTOGRMYnD8cNtc9UVo+oAi+KZU1JfjhI/
+pgFW3ubpqJFw6LweF8BY5hMbA9fuUY/mjTU3EQ6/ip8AHDXYxcU1NsFK7HOOpDgx
+rdLfB5Po59inOZZvFSvXEuUi8LgkXmT16RqTJCdn+ym7dCwowqaMHsXUCgAzHkWh
+cEVzG6IFp6GUBc3aemDO9wctwV/cttv1ethYDqt7MLs0ThB62WDoCXAQ9FGNGYjq
+qlib78dhIU4XAbbXLe2144yxfNujQ1py+mFK/HVInPQ6W7xi6kRTfvMe9c7Vr9KB
+sFQDSIPWneRsxa110IfpJ5b4LXb4nRtxsyw0Hw3DaqZ+z9Uh3ZE1LKASn8nD921G
+kjEz8yycXFrVm70dCP4x2BE0uzdm1U7Nsu2F+fzzKd5MP2L/alJOX7yeHZfWrHsk
+Er99gti2r916QfFyWvCBJMVOwc1hskEn9HuXXS7wvMrur71xrYoF4o9Q9uAgVoeH
+Nq1wdu5sThHMBHqLZYHEUhcNviWExNY7kJK8rUWOjHRnO/5qu+zOiYHn5nOlTptU
+Fh5kPGZSttoNAJvhmqkcuii6jL0yPpUdQBeiE0XlCxdhXbEHcvVWjZG5oNeO2jTD
+YA6Ms3t85XT2aHhegU9fYXRnZjg2bEbsZbNQDtS6V1PjUUmvLV6pVDxXY4xaAfE1
+aVjjk2VWXYwr/9dgzD55NI00ligrRRFcPpB6MsqWmtE11Tk9QAYj/+3ou3v+3PSb
+3w595Tv06HQmrn2O9ciFLHCKyhvAoJU8a5M56Gq1H2C+gBa9h7yi9HugwojgePvv
+RsuQr/fFZFKccZAd2QRNF6NNXZHXkNlp9V4JUjTmvMH14PF3vt0GeZLQNKXVnYl7
+w2//JAc4RZw8WjoqbXIr2/dEZWK9dB1bWZDh3G2HN8gAGBpB3R8vrY1FiKFjGW35
+fQsN65RhJJc7kNBZZqpiVzfyE6Dp0Aam0Rf/P10YnlkzlfXi/CF1oA5J/lpSd79E
+jC39ZsB8SlGdrVO0uVYHx5YPDjX4dbAlgahZUZBiwTyCo3xMwqP3alJAs9gWfzzG
+dyjkiAZgMswD2IE0FZIgVdw9Qo7De5tJsFhfXzLn5rFjoSJeW7J612WejITqFsWJ
+l350g2wAgR3vj1husbevp/Dw0fDZFvR9XaE7y2k4OwGf36BoDHZfDlgx5iVgGXt+
+TdTzTi7VG2E6dhqd0yb3v2xCUAvtd/YEgEWYypVBDDO4CDmvfOId+nQRK37Lv4Z2'
