@@ -60,3 +60,15 @@ group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
 gem 'ransack'
+gem 'nokogiri', '~> 1.7'
+group :production, :staging do
+  gem 'unicorn', '5.4.1'
+end
+
+group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+end
+

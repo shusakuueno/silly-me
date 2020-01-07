@@ -1,0 +1,119 @@
+current directory: /home/ec2-user/environment/silly-me/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.2/ext/nio4r
+/usr/local/rbenv/versions/2.5.3/bin/ruby -r ./siteconf20200107-23158-gr3tbo.rb extconf.rb
+checking for unistd.h... yes
+checking for linux/aio_abi.h... yes
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /home/ec2-user/environment/silly-me/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR=" clean
+
+current directory: /home/ec2-user/environment/silly-me/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR="
+compiling bytebuffer.c
+compiling monitor.c
+compiling nio4r_ext.c
+In file included from nio4r_ext.c:7:
+../libev/ev.c:511:48: warning: "/*" within comment
+In file included from nio4r_ext.c:7:
+../libev/ev.c: In function ‘ecb_binary32_to_binary16’:
+../libev/ev.c:1302: warning: comparison between signed and unsigned integer expressions
+In file included from nio4r_ext.c:7:
+../libev/ev.c: At top level:
+../libev/ev.c:1867: warning: ‘ev_default_loop_ptr’ initialized and declared ‘extern’
+../libev/ev.c: In function ‘ev_time’:
+../libev/ev.c:1907: warning: ISO C90 forbids mixed declarations and code
+../libev/ev.c: In function ‘array_nextsize’:
+../libev/ev.c:1978: warning: comparison between signed and unsigned integer expressions
+In file included from ../libev/ev.c:2742,
+                 from nio4r_ext.c:7:
+../libev/ev_epoll.c: In function ‘epoll_modify’:
+../libev/ev_epoll.c:134: warning: left-hand operand of comma expression has no effect
+In file included from ../libev/ev.c:2745,
+                 from nio4r_ext.c:7:
+../libev/ev_linuxaio.c: In function ‘linuxaio_modify’:
+../libev/ev_linuxaio.c:289: warning: ISO C90 forbids mixed declarations and code
+../libev/ev_linuxaio.c:304: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c: In function ‘linuxaio_parse_events’:
+../libev/ev_linuxaio.c:344: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c: In function ‘linuxaio_poll’:
+../libev/ev_linuxaio.c:553: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c: In function ‘linuxaio_init’:
+../libev/ev_linuxaio.c:592: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c:592: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c:592: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c:592: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c:592: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c:592: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c:592: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c:592: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c:592: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c: In function ‘linuxaio_fork’:
+../libev/ev_linuxaio.c:636: warning: left-hand operand of comma expression has no effect
+../libev/ev_linuxaio.c:636: warning: left-hand operand of comma expression has no effect
+In file included from ../libev/ev.c:2748,
+                 from nio4r_ext.c:7:
+../libev/ev_poll.c: In function ‘poll_poll’:
+../libev/ev_poll.c:113: warning: left-hand operand of comma expression has no effect
+../libev/ev_poll.c:121: warning: left-hand operand of comma expression has no effect
+In file included from nio4r_ext.c:7:
+../libev/ev.c: In function ‘verify_watcher’:
+../libev/ev.c:3181: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:3184: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘verify_heap’:
+../libev/ev.c:3195: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:3196: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:3197: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘array_verify’:
+../libev/ev.c:3209: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_verify’:
+../libev/ev.c:3227: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:3240: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:3244: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:3245: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘timers_reify’:
+../libev/ev.c:3431: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘periodics_reify’:
+../libev/ev.c:3494: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_run’:
+../libev/ev.c:3656: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:3824: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_io_start’:
+../libev/ev.c:3999: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:4000: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:4012: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_io_stop’:
+../libev/ev.c:4028: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_timer_start’:
+../libev/ev.c:4052: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_timer_stop’:
+../libev/ev.c:4081: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_periodic_start’:
+../libev/ev.c:4145: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_periodic_stop’:
+../libev/ev.c:4178: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_signal_start’:
+../libev/ev.c:4217: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:4220: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_child_start’:
+../libev/ev.c:4339: warning: left-hand operand of comma expression has no effect
+../libev/ev.c: In function ‘ev_embed_start’:
+../libev/ev.c:4924: warning: left-hand operand of comma expression has no effect
+../libev/ev.c:5268:27: warning: "/*" within comment
+../libev/ev.c:5269:27: warning: "/*" within comment
+At top level:
+cc1: warning: unrecognized command line option "-Wno-self-assign"
+cc1: warning: unrecognized command line option "-Wno-constant-logical-operand"
+cc1: warning: unrecognized command line option "-Wno-parentheses-equality"
+cc1: warning: unrecognized command line option "-Wno-tautological-compare"
+compiling selector.c
+linking shared-object nio4r_ext.so
+
+current directory: /home/ec2-user/environment/silly-me/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20200107-23158-1g0y1vr

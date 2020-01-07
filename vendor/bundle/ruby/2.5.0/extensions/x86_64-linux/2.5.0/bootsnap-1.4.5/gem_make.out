@@ -1,0 +1,28 @@
+current directory: /home/ec2-user/environment/silly-me/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
+/usr/local/rbenv/versions/2.5.3/bin/ruby -r ./siteconf20200107-23158-10if9lg.rb extconf.rb
+creating Makefile
+
+current directory: /home/ec2-user/environment/silly-me/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/ec2-user/environment/silly-me/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: In function ‘get_ruby_platform’:
+bootsnap.c:240: warning: ISO C90 forbids mixed declarations and code
+bootsnap.c: In function ‘bs_cache_path’:
+bootsnap.c:266: warning: format ‘%014llx’ expects type ‘long long unsigned int’, but argument 5 has type ‘uint64_t’
+bootsnap.c: In function ‘bs_rb_fetch’:
+bootsnap.c:307: warning: ISO C90 forbids mixed declarations and code
+bootsnap.c:624: warning: ‘output_data’ may be used uninitialized in this function
+bootsnap.c:624: note: ‘output_data’ was declared here
+At top level:
+cc1: warning: unrecognized command line option "-Wno-self-assign"
+cc1: warning: unrecognized command line option "-Wno-constant-logical-operand"
+cc1: warning: unrecognized command line option "-Wno-parentheses-equality"
+cc1: warning: unrecognized command line option "-Wno-tautological-compare"
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/ec2-user/environment/silly-me/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20200107-23158-187fua4/bootsnap

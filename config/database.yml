@@ -48,9 +48,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   pool: 5
-  database: silly-me_production
-  username: silly-me
+  database: pictweet_production
+  username: root
   password: <%= ENV['SILLY-ME_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
