@@ -60,7 +60,7 @@ group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
 gem 'ransack'
-gem 'nokogiri', '~> 1.7'
+gem 'nokogiri', '~> 1.12'
 
 group :development, :test do
   gem 'capistrano'
